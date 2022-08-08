@@ -1,38 +1,27 @@
 //William Dalry Brown(10952541)
 //I William Dalry Brown endorse this code.
 //
-function isPrime(num){
-    if (num < 2){
-        return false;
-    }
-    if (num === 2){
-        return true;
-    }
-
-    for(let i = 2; i < num; i++){
-            if(num % i == 0){
-                return false;
+function primeNumAverage(max)
+{
+    var store  = [], i, j, primes = []; var sum = 0; var average;
+    for (i = 2; i <= max; ++i) 
+    {
+        if (!store [i]) 
+          {
+            primes.push(i);
+            for (j = i << 1; j <= max; j += i) 
+            {
+                store[j] = true;
             }
-            else{
-                return true;
-            }
+        }
     }
-
-}
-
-
-function average(nums) {
-
-var sum = 0;
-var count = 0;
-
-for( let i = 0; i < nums; i++){
-    if (isPrime(i)) {
-        sum += i;
-        count++;
+    for(let i = 0; i < primes.length; i++){
+        sum += primes[i]
     }
+    average = sum/primes.length;
+    console.log(average);
+    return primes;
 }
-console.log(sum/count);
 
-}
-average(7);
+console.log(primeNumAverage(30));
+
