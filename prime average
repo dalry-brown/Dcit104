@@ -1,3 +1,6 @@
+//William Dalry Brown(10952541)
+//I William Dalry Brown endorse this code.
+//
 function isPrime(num){
     if (num < 2){
         return false;
