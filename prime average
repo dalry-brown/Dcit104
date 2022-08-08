@@ -29,8 +29,6 @@ for( let i = 0; i < nums; i++){
         count++;
     }
 }
-console.log(sum);
-console.log(count);
 console.log(sum/count);
 
 }
