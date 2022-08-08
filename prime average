@@ -19,8 +19,7 @@ function primeNumAverage(max)
         sum += primes[i]
     }
     average = sum/primes.length;
-    console.log(average);
-    return primes;
+    return average;
 }
 
 console.log(primeNumAverage(30));
